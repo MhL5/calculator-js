@@ -12,3 +12,10 @@
   }
   /* end of calculator */
 }
+
+.translate-left {
+  @apply translate-x-5;
+}
+.translate-right {
+  @apply -translate-x-5;
+}

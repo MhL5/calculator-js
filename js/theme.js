@@ -9,9 +9,9 @@ const systemTheme = window.matchMedia(`(prefers-color-scheme: dark)`).matches;
 
 const iconToggle = function () {
   // dark right
-  themeToggleDotElement.classList.toggle(`translate-x-5`);
+  themeToggleDotElement.classList.toggle(`translate-left`);
   // light left
-  themeToggleDotElement.classList.toggle(`-translate-x-5`);
+  themeToggleDotElement.classList.toggle(`translate-right`);
 };
 
 // initial theme check
@@ -19,11 +19,11 @@ const themeCheck = function () {
   if (userTheme === `dark` || (!userTheme && systemTheme)) {
     document.documentElement.classList.add(`dark`);
     // right is dark
-    themeToggleDotElement.classList.add(`translate-x-5`);
+    themeToggleDotElement.classList.toggle(`translate-left`);
     return;
   }
   // else its light left
-  themeToggleDotElement.classList.add(`-translate-x-5`);
+  themeToggleDotElement.classList.toggle(`translate-right`);
 };
 
 // Manual theme check

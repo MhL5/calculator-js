@@ -36,7 +36,6 @@ const computeNumbers = function (lastNum, curNum, type) {
 
   // storing history
   calcHistory.push(lastNum, type, curNum);
-  console.log(calcHistory);
 
   // if our last Value is not empty then add them together
   // first time that function runs , last value is 0 so we need to start from second time
@@ -169,7 +168,7 @@ const lastOperationDisplay = function () {
   //  else
   return (lastOperation = ``);
 };
-console.log(lastOperationDisplay());
+
 //
 const calcInit = function (e) {
   e.preventDefault();
@@ -197,9 +196,6 @@ const calcInit = function (e) {
   if (targetAttribute === `+`) computeNumbers(lastValue, curValue, `+`);
   if (targetAttribute === `/`) computeNumbers(lastValue, curValue, `/`);
   if (targetAttribute === `=`) computeNumbers(lastValue, curValue, `=`);
-
-  // last operation display
-  lastOperationDisplay();
 
   // render the values inside DOM
   numOutput.innerText = curValue;
