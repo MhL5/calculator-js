@@ -1,6 +1,6 @@
 "use strict";
 
-// import "./theme.js";
+import "./theme.js";
 
 const btnContainer = document.getElementById(`calculator-btn-container`);
 const numOutput = document.getElementById(`output-num`);
